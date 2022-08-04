@@ -15,7 +15,7 @@ function Header({ data, showNewsBanner, hiddenShadow = false }) {
 	const { menu, button } = data;
 	return (
 		<header
-			className={`fixed top-0 left-0 right-0 z-[100] transition-shadow duration-200`}>
+			className="fixed top-0 left-0 right-0 z-[100] transition-shadow duration-200">
 			<div
 				className={`container relative z-[95] flex !max-w-[none] items-center justify-between !px-5 py-6 xl:!px-12 transition-colors duration-300 `}
 			>
