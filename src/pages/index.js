@@ -1,11 +1,8 @@
-import Template, { getStaticProps as getPageStaticProps } from "~/pages/[...slug]";
+import Template, { getStaticProps as getPageStaticProps } from "~/pages/[slug]";
 
 export default Template;
 
-export async function getStaticProps(ctx) {
-	const props = await getPageStaticProps({
-		...ctx,
-		params: { slug: ["homepage"] },
-	});
+export async function getStaticProps() {
+	const props = await getPageStaticProps({ params: { slug: "home" } });
 	return props;
 }

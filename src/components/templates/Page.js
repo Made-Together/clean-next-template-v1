@@ -1,19 +1,14 @@
+/* eslint-disable no-unused-vars */
 import React from "react";
 import { Layout } from "~/templates/Layout";
-import FlexibleLayout from "~/components/flexible";
 
-export default function Page(props) {
-	const { page } = props;
-	if (!page) return null;
+import { LayoutRenderer } from "../layouts/LayoutRenderer";
 
-	const { flexible_content } = page;
-	if (!flexible_content) return null;
-
+export default function Page(page) {
+	const { post_title, sections, post_name } = page;
 	return (
-		<Layout data={props}>
-			{flexible_content?.map((layout, i) => (
-				<FlexibleLayout {...layout} key={(layout?.acf_fc_layout || "") + i} />
-			))}
+		<Layout page={page}>
+			<LayoutRenderer page={post_name} prefix="Page_Posttypepage_Sections_Section_Components_" sections={sections} />
 		</Layout>
 	);
 }

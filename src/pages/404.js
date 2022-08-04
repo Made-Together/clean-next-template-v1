@@ -1,11 +1,12 @@
-import Template, { getStaticProps as getPageStaticProps } from "~/pages/[...slug]";
+import React from "react";
+import Page from "~/components/templates/Page";
+import { getFromWordpress } from "~/utils/server";
 
-export default Template;
+export default function FourOhFour(data) {
+	return <Page {...data} />;
+}
 
-export async function getStaticProps(ctx) {
-	const props = await getPageStaticProps({
-		...ctx,
-		params: { slug: ["404-2"] },
-	});
-	return props;
+export async function getStaticProps() {
+	const data = await getFromWordpress(`together/post?slug=404-2`);
+	return { props: data };
 }

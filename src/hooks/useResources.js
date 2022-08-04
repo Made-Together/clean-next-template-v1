@@ -1,37 +1,18 @@
-import { useRouter } from "next/router";
-import useSWR from "swr";
+import React, { useState, useEffect } from "react";
+import axios from "axios";
 
-const fetcher = (...args) => fetch(...args).then((res) => res.json());
+function useResources() {
+	const [resources, setResources] = useState();
 
-export default function useResources({ category = "", industry = "", pageNumber, perPage = 9 }) {
-	const router = useRouter();
-	const { data, error } = useSWR(
-		`${process.env.NEXT_PUBLIC_WORDPRESS_BASE_URL}/wp-json/together/post_previews?post_type=post&lang=${router?.locale || "en"}`,
-		fetcher
-	);
-	const isLoading = !error && !data;
-	const isError = error;
+	useEffect(() => {
+		const fetchData = async () => {
+			const { data } = await axios.get(`${process.env.NEXT_PUBLIC_WORDPRESS_BASE_URL}/wp-json/together/resource`);
+			setResources(data);
+		};
+		fetchData();
+	}, []);
 
-	if (isLoading || isError) {
-		return [];
-	}
-
-	// No filtering? return all data
-	if (!category.length && !industry.length) return data;
-
-	let filteredPosts = data;
-
-	if (category.length) {
-		filteredPosts = data.filter((p) => p.categories && p.categories.filter((c) => c.slug === category).length > 0);
-	}
-
-	if (industry.length) {
-		filteredPosts = filteredPosts.filter((p) => p.industry && p.industry.filter((c) => c.slug === industry).length > 0);
-	}
-
-	if (pageNumber) {
-		return filteredPosts.slice(pageNumber * perPage - perPage, pageNumber * perPage);
-	}
-
-	return filteredPosts;
+	return [resources];
 }
+
+export default useResources;
