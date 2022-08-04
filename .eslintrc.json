@@ -1,0 +1,56 @@
+{
+  "extends": ["next/core-web-vitals", "airbnb", "prettier"],
+  "plugins": ["cypress", "import", "prettier"],
+	"env": {
+    "cypress/globals": true
+  },
+  "rules": {
+    "no-console": ["off"],
+    "react/jsx-filename-extension": ["off"],
+    "react/prop-types": ["off"],
+    "react/jsx-props-no-spreading": ["off"],
+    "react/destructuring-assignment": ["off"],
+    "react/no-array-index-key": ["off"],
+    "react/react-in-jsx-scope": ["off"],
+    "import/prefer-default-export": ["off"],
+    "react/jsx-no-constructed-context-values": ["off"],
+    "import/no-dynamic-require": ["off"],
+    "@next/next/no-img-element": ["off"],
+    "jsx-a11y/anchor-is-valid": ["off"],
+    "jsx-a11y/no-noninteractive-element-interactions": ["off"],
+    "jsx-a11y/no-static-element-interactions": ["off"],
+    "jsx-a11y/click-events-have-key-events": ["off"],
+    "react/no-danger": ["off"],
+    "prettier/prettier": ["warn"],
+    "no-unused-vars": ["warn"],
+    "no-nested-ternary": ["off"],
+    "camelcase": ["off"],
+    "no-use-before-define": ["warn"],
+    "global-require": ["off"],
+    "react/no-unescaped-entities": ["warn"],
+    "no-param-reassign": ["warn"],
+    "no-unsafe-optional-chaining": ["warn"],
+    "react-hooks/rules-of-hooks": ["warn"],
+    "no-shadow": ["warn"],
+    "no-unused-expressions": ["warn"],
+    "no-restricted-globals": ["warn"],
+		"jsx-a11y/control-has-associated-label": ["off"]
+  },
+  "settings": {
+    "import/resolver": {
+      "alias": {
+        "map": [
+          ["~/components", "./src/components"],
+          ["~/blocks", "./src/components/blocks"],
+          ["~/elements", "./src/components/elements"],
+          ["~/templates", "./src/components/templates"],
+          ["~/pages", "./src/pages"],
+          ["~/hooks", "./src/hooks"],
+          ["~/utils", "./src/utils"],
+          ["~/assets", "./src/assets"]
+        ],
+        "extensions": [".js", ".jsx", ".json"]
+      }
+    }
+  }
+}

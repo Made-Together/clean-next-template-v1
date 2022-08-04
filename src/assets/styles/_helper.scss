@@ -1,0 +1,79 @@
+.next-image-wrapper {
+	> span {
+		height:100%!important;
+		width:100%!important;
+	}
+}
+
+.trans {
+  @apply transition duration-150 ease-in-out;
+
+  &-colors {
+    @apply transition-colors;
+  }
+
+  &-opacity {
+    @apply transition-opacity;
+  }
+
+  &-all {
+    @apply transition-all;
+  }
+}
+
+.hover\:invert-image:hover img {
+  filter: invert(1);
+}
+
+.gatsby-image-auto {
+  img {
+    width: unset !important;
+    width: auto !important;
+  }
+}
+
+.bg-grey {
+  .load-more {
+    background-color: #fff;
+  }
+}
+
+.bg-beige {
+  .accordion-list {
+    .bg-beige {
+      background-color: #fff;
+    }
+  }
+}
+
+.bg-purple {
+  .text-link-underline {
+    background-color: #fff;
+  }
+
+  .bg-white .text-link-underline {
+    background-color: #1d2222;
+  }
+}
+
+.underline-a a {
+  @apply underline;
+}
+
+.bg-light-beige .switcher-fade {
+  background: linear-gradient(
+    180deg,
+    #f8f5f0 15.91%,
+    rgba(248, 245, 240, 0.75) 84.66%,
+    rgba(248, 249, 249, 0) 100%
+  );
+}
+
+.bg-grey .switcher-fade {
+  background: linear-gradient(
+    180deg,
+    rgb(248, 249, 249) 15.91%,
+    rgba(248, 249, 249, 0.75) 84.66%,
+    rgba(248, 249, 249, 0) 100%
+  );
+}

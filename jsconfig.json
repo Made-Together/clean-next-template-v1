@@ -1,0 +1,16 @@
+{
+  "include": ["./src/**/*.js"],
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "~/components/*": ["src/components/*"],
+      "~/blocks/*": ["src/components/blocks/*"],
+      "~/elements/*": ["src/components/elements/*"],
+      "~/templates/*": ["src/components/templates/*"],
+      "~/pages/*": ["src/pages/*"],
+      "~/utils/*": ["src/utils/*"],
+      "~/hooks/*": ["src/hooks/*"],
+      "~/assets/*": ["src/assets/*"]
+    }
+  }
+}

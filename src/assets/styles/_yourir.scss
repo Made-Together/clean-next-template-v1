@@ -1,0 +1,1431 @@
+.yourir-chart-panel {
+    height: 250px;
+	@media (min-width: 768px){
+    	height: 350px;
+	}
+	font-size: 12px;
+	@media (min-width: 768px){
+		font-size: 14px;
+	}
+}
+
+.yourir-summary-table {
+	width: 100%;
+	td {
+		padding: 5px;
+		text-align: center;
+		line-height: 1em;
+		font-size: 11px;
+		width: 20%;
+		vertical-align: top;;
+		@media (min-width: 768px){
+			@apply text-22px;
+			padding: 25px 10px;
+		}
+	}
+	tr:not(:last-child) td {
+		@apply border-b border-b-grey font-bold;
+	}
+	td:not(:last-child) {
+		@apply border-r border-r-grey;
+	}
+}
+
+.yourir-toggle-buttons {
+	margin-top: 10px;
+	button {
+		border-radius: 60px;
+		@apply border border-grey font-bold text-14px py-[3px] px-[12px];
+		@apply hover:shadow-lg transition duration-300 hover:bg-grey;
+		display: inline-block;
+		margin: 0 8px 6px 0;
+		&.yourir-active {
+			background: black;
+			color: white;
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+ * yourir v1.14.5
+ * (c) 2019 Iguana2 Pty. Ltd. - https://yourir.info/
+ * License: Creative Commons Attribution No Derivatives 3.0 License
+ * (https://creativecommons.org/licenses/by-nd/3.0/legalcode)
+ */
+ .yourir-has-error {
+  background: #febabb;
+  border-color: #d5091b
+}
+
+.yourir-error-message-container {
+  background: #febabb;
+  border-color: #d5091b;
+  padding: 1em
+}
+
+.yourir-error-message-list {
+  list-style: none;
+  margin: 0;
+  padding: 0
+}
+
+.yourir-error-message {
+  color: #d5091b
+}
+
+.yourir-display-block {
+  display: block
+}
+
+.yourir-display-none {
+  display: none
+}
+
+.yourir-hidden {
+  visibility: hidden
+}
+
+.yourir-hide-template {
+  display: none
+}
+
+body.yourir-loading .yourir-hide-while-loading {
+  display: none
+}
+
+.yourir-hide-before-load {
+  display: none
+}
+
+body.yourir-loaded .yourir-hide-before-load {
+  display: block
+}
+
+body.yourir-loaded .yourir-hide-after-load {
+  display: none
+}
+
+.yourir-fade-in {
+  -webkit-transition: opacity .25s ease-in-out;
+  -moz-transition: opacity .25s ease-in-out;
+  -ms-transition: opacity .25s ease-in-out;
+  -o-transition: opacity .25s ease-in-out;
+  transition: opacity .25s ease-in-out;
+  opacity: 1
+}
+
+.yourir-fade-out {
+  -webkit-transition: opacity .25s ease-in-out;
+  -moz-transition: opacity .25s ease-in-out;
+  -ms-transition: opacity .25s ease-in-out;
+  -o-transition: opacity .25s ease-in-out;
+  transition: opacity .25s ease-in-out;
+  opacity: 0
+}
+
+.yourir-number .yourir-blank:before {
+  content: "\2012"
+}
+
+.yourir-number .yourir-negative:before {
+  content: "("
+}
+
+.yourir-number .yourir-negative:after {
+  content: ")"
+}
+
+.yourir-change .yourir-positive {
+  color: #20b720
+}
+
+.yourir-change .yourir-positive:before {
+  content: "+"
+}
+
+.yourir-change .yourir-negative {
+  color: #e70000
+}
+
+.yourir-change .yourir-negative:before {
+  content: "-"
+}
+
+.yourir-change .yourir-negative:after {
+  content: ""
+}
+
+.yourir-change .yourir-zero:before {
+  content: "\2012"
+}
+
+.yourir-change .yourir-zero .yourir-integer-part,.yourir-change .yourir-zero .yourir-decimal-part {
+  display: none
+}
+
+.yourir-change .yourir-currency-symbol {
+  display: none
+}
+
+.yourir-change .yourir-yield-symbol {
+  display: none
+}
+
+.yourir-pct-change .yourir-positive {
+  color: #20b720
+}
+
+.yourir-pct-change .yourir-negative {
+  color: #e70000
+}
+
+.yourir-pct-change .yourir-negative:before {
+  content: ""
+}
+
+.yourir-pct-change .yourir-negative:after {
+  content: ""
+}
+
+.yourir-pct-change .yourir-zero .yourir-integer-part,.yourir-change .yourir-zero .yourir-decimal-part {
+  display: none
+}
+
+.yourir-pct-symbol {
+  font-size: smaller
+}
+
+.yourir-yield-symbol {
+  font-size: smaller
+}
+
+.yourir-magnitude-symbol {
+  font-size: smaller
+}
+
+.yourir-show-currency-symbol .yourir-currency-symbol {
+  display: inline
+}
+
+.yourir-hide-currency-symbol .yourir-currency-symbol {
+  display: none
+}
+
+.yourir-tooltip-wrapper {
+  position: relative
+}
+
+.yourir-tooltip-wrapper .yourir-tooltip {
+  display: none
+}
+
+.yourir-tooltip-wrapper:hover .yourir-tooltip {
+  display: block;
+  position: absolute;
+  padding: 2px;
+  min-width: 40px;
+  width: auto;
+  height: auto;
+  white-space: nowrap;
+  top: 10px;
+  left: 15px;
+  cursor: auto;
+  z-index: 100;
+  background: white;
+  border: 1px solid #ccc;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.175)
+}
+
+.yourir-tooltip-wrapper:hover .yourir-tooltip table {
+  background: white;
+  margin: 0;
+  padding: 0
+}
+
+.yourir-tooltip-wrapper:hover .yourir-tooltip table tr,.yourir-tooltip-wrapper:hover .yourir-tooltip table tr:nth-child(odd),.yourir-tooltip-wrapper:hover .yourir-tooltip table tr:nth-child(even) {
+  background: none
+}
+
+.yourir-tooltip-wrapper:hover .yourir-tooltip table td {
+  padding: 1px;
+  border: none
+}
+
+.yourir-caret {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  margin-left: 2px;
+  vertical-align: middle;
+  border-top: 4px solid;
+  border-right: 4px solid transparent;
+  border-left: 4px solid transparent
+}
+
+.yourir-muted {
+  color: #aaa
+}
+
+.yourir-active {
+  background-color: #f5f5f5
+}
+
+.yourir-disabled {
+  text-decoration: none;
+  pointer-events: none;
+  cursor: default
+}
+
+a.yourir-button,a.yourir-button:link,a.yourir-button:visited,a.yourir-button:hover {
+  text-decoration: none
+}
+
+.yourir-button.yourir-disabled {
+  opacity: 0.5
+}
+
+.yourir-clickable {
+  cursor: pointer
+}
+
+.yourir-empty {
+  position: absolute;
+  width: 0;
+  height: 0;
+  visibility: hidden
+}
+
+.yourir-zero-width-space:before {
+  content: "\200B"
+}
+
+.yourir-loading h1[data-yourir]:before,.yourir-loading h2[data-yourir]:before,.yourir-loading h3[data-yourir]:before,.yourir-loading h4[data-yourir]:before,.yourir-loading h5[data-yourir]:before,.yourir-loading h6[data-yourir]:before,.yourir-loading span[data-yourir]:before,.yourir-loading td[data-yourir]:before,.yourir-loading button[data-yourir]:before {
+  content: "\200B"
+}
+
+yourir-component {
+  display: block
+}
+
+yourir-field {
+  display: inline
+}
+
+.yourir-dialog-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  z-index: 99
+}
+
+.yourir-dialog-container .yourir-dialog {
+  display: inline-block;
+  padding: 1em;
+  background: #fff;
+  border: 1px solid #ccc;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.175);
+  margin-top: 20%;
+  max-width: 60%;
+  overflow: hidden;
+  white-space: normal
+}
+
+.yourir-dialog {
+  text-align: left
+}
+
+.yourir-banned {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  margin: 8px;
+  padding: 8px;
+  z-index: 999;
+  background: #f70707 !important;
+  border: none;
+  opacity: 0.85;
+  color: white;
+  font-family: Roboto,'Lucida Sans Unicode','Lucida Grande','Helvetica Neue',Helvetica,sans-serif;
+  font-size: 12px;
+  line-height: 18px
+}
+
+.yourir-banned h1 {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: normal;
+  color: white !important;
+  margin: 0;
+  padding: 0
+}
+
+.yourir-banned .yourir-banned-contact {
+  border-top: 1px solid white;
+  padding-top: 1px
+}
+
+.yourir-banned a {
+  color: white !important
+}
+
+.yourir-price-sensitive-marker:before {
+  content: "\2691"
+}
+
+.yourir-embargoed .yourir-announcement-heading a {
+  opacity: 0.5
+}
+
+.yourir-announcement-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  z-index: 98;
+  text-align: center
+}
+
+.yourir-announcement-content {
+  position: relative;
+  width: 80%;
+  height: 96%;
+  margin: 1% 10% 3% 10%;
+  padding: 0;
+  background: white;
+  border: 1px solid #ccc;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.175);
+  overflow: visible
+}
+
+.yourir-announcement-document {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  text-align: center
+}
+
+.yourir-announcement-document img,.yourir-announcement-document pre {
+  margin-top: 2em
+}
+
+.yourir-announcement-document pre {
+  text-align: left;
+  margin-left: 4em
+}
+
+.yourir-announcement-document object {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%
+}
+
+.yourir-announcement-document embed {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%
+}
+
+.yourir-announcement-title {
+  text-align: left;
+  vertical-align: middle;
+  padding-left: .5em;
+  padding-right: .5em;
+  line-height: 200%
+}
+
+.yourir-announcement-menu {
+  float: right
+}
+
+.yourir-announcement-menu a {
+  margin-left: 1em
+}
+
+.yourir-announcement-part-content {
+  position: relative;
+  display: inline-block;
+  margin: 0 auto;
+  top: 50%;
+  transform: translateY(-50%);
+  background: white;
+  border: 1px solid #ccc;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.175);
+  text-align: left;
+  padding: 0.5em 1.5em
+}
+
+ul.yourir-announcement-parts {
+  list-style: none;
+  padding-left: 0
+}
+
+li.yourir-announcement-part {
+  margin-bottom: 0.5em
+}
+
+li.yourir-announcement-part div {
+  padding-left: 1em
+}
+
+.yourir-chart {
+  position: relative;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 10px 0px 15px 5px;
+  overflow: visible
+}
+
+.yourir-chart-spacing {
+  position: absolute;
+  top: 0;
+  left: 0;
+  visibility: hidden
+}
+
+.yourir-chart-spacing-parent {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 0;
+  padding: 0
+}
+
+.yourir-chart-spacing-child {
+  width: 10px;
+  height: 10px
+}
+
+.yourir-chart-gridline {
+  stroke: #ececec;
+  stroke-width: 1px
+}
+
+.yourir-chart-panel {
+  position: relative;
+  height: 100px
+}
+
+.yourir-chart-extra-panel {
+  margin-top: 20px
+}
+
+.yourir-chart-panel-background {
+  position: absolute
+}
+
+.yourir-chart-panel-border {
+  stroke: black;
+  stroke-width: 1px;
+  fill: none
+}
+
+.yourir-chart-panel-tick-area {
+  padding: 5px
+}
+
+.yourir-chart-panel-plot-area {
+  margin: 0;
+  padding: 0px 5px 0 5px
+}
+
+.yourir-chart-panel-plots {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0
+}
+
+.yourir-chart-panel-markers {
+  position: absolute
+}
+
+.yourir-chart-yaxis-spacing {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 50px;
+  width: 1px
+}
+
+.yourir-chart-yaxis-minor-spacing {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 20px;
+  width: 1px
+}
+
+.yourir-chart-yaxis-stripe {
+  fill: none
+}
+
+.yourir-chart-yaxis-minor-gridline {
+  stroke-opacity: 0.5
+}
+
+.yourir-chart-yaxis-tick {
+  stroke: black;
+  stroke-width: 1px
+}
+
+.yourir-chart-yaxis-label-container {
+  position: absolute;
+  display: block;
+  vertical-align: middle;
+  height: 20px;
+  line-height: 20px;
+  margin: 0;
+  padding: 0
+}
+
+.yourir-chart-yaxis-label {
+  white-space: nowrap;
+  margin: 0;
+  padding: 0;
+  line-height: normal
+}
+
+.yourir-chart-yaxis-outside .yourir-chart-yaxis-label-container {
+  margin-top: -11px;
+  vertical-align: middle
+}
+
+.yourir-chart-yaxis-outside .yourir-chart-yaxis-label {
+  vertical-align: middle
+}
+
+.yourir-chart-yaxis-inside .yourir-chart-yaxis-label-container {
+  margin-top: -21px
+}
+
+.yourir-chart-yaxis-inside .yourir-chart-yaxis-label {
+  vertical-align: bottom
+}
+
+.yourir-chart-yaxis-left .yourir-chart-yaxis-outside .yourir-chart-yaxis-label-container {
+  right: 100%;
+  margin-right: 4px
+}
+
+.yourir-chart-yaxis-left .yourir-chart-yaxis-inside .yourir-chart-yaxis-label-container {
+  left: 0;
+  margin-left: 4px
+}
+
+.yourir-chart-yaxis-right .yourir-chart-yaxis-outside .yourir-chart-yaxis-label-container {
+  left: 100%;
+  margin-left: 4px
+}
+
+.yourir-chart-yaxis-right .yourir-chart-yaxis-inside .yourir-chart-yaxis-label-container {
+  right: 0;
+  margin-right: 4px
+}
+
+.yourir-chart-yaxis-labels-below-tick .yourir-chart-yaxis-label-container {
+  margin-top: 0;
+  vertical-align: top
+}
+
+.yourir-chart-yaxis-labels-below-tick .yourir-chart-yaxis-label {
+  vertical-align: top
+}
+
+.yourir-chart-yaxis-labels-centered-with-tick .yourir-chart-yaxis-label-container {
+  margin-top: -11px;
+  vertical-align: middle
+}
+
+.yourir-chart-yaxis-labels-centered-with-tick .yourir-chart-yaxis-label {
+  display: inline-block;
+  vertical-align: middle
+}
+
+.yourir-chart-yaxis-labels-above-tick .yourir-chart-yaxis-label-container {
+  margin-top: -20px;
+  vertical-align: bottom
+}
+
+.yourir-chart-yaxis-labels-above-tick .yourir-chart-yaxis-label {
+  display: inline-block;
+  vertical-align: bottom
+}
+
+.yourir-chart-yaxis-labels-outside .yourir-chart-yaxis-inside {
+  display: none
+}
+
+.yourir-chart-yaxis-labels-inside .yourir-chart-yaxis-outside {
+  display: none
+}
+
+.yourir-chart-yaxis-labels-left .yourir-chart-yaxis-right {
+  display: none
+}
+
+.yourir-chart-yaxis-labels-left .yourir-chart-yaxis-outside .yourir-chart-panels {
+  margin-left: 40px;
+  margin-right: 0
+}
+
+.yourir-chart-yaxis-labels-right .yourir-chart-yaxis-left {
+  display: none
+}
+
+.yourir-chart-yaxis-labels-right .yourir-chart-yaxis-outside .yourir-chart-panels {
+  margin-left: 0;
+  margin-right: 40px
+}
+
+.yourir-chart-yaxis-labels-both .yourir-chart-yaxis-outside .yourir-chart-panels {
+  margin-left: 40px;
+  margin-right: 40px
+}
+
+.yourir-chart-yaxis-labels-both .yourir-chart-yaxis1 .yourir-chart-yaxis-right {
+  display: none
+}
+
+.yourir-chart-yaxis-labels-both .yourir-chart-yaxis2 .yourir-chart-yaxis-left {
+  display: none
+}
+
+.yourir-chart-yaxis-labels-none .yourir-chart-yaxis-inside {
+  display: none
+}
+
+.yourir-chart-yaxis-labels-none .yourir-chart-yaxis-outside {
+  display: none
+}
+
+.yourir-chart-yaxis-labels-none .yourir-chart-panels {
+  margin-left: 0;
+  margin-right: 0
+}
+
+.yourir-chart-yaxis-labels-hidden .yourir-chart-yaxis-inside {
+  visibility: hidden
+}
+
+.yourir-chart-yaxis-labels-hidden .yourir-chart-yaxis-outside {
+  visibility: hidden
+}
+
+.yourir-chart-yaxis-inside .yourir-chart-yaxis-top-label {
+  display: none
+}
+
+.yourir-chart-yaxis-labels-above-tick .yourir-chart-yaxis-inside .yourir-chart-yaxis-bottom-label,.yourir-chart-yaxis-labels-centered-with-tick .yourir-chart-yaxis-inside .yourir-chart-yaxis-top-label,.yourir-chart-yaxis-labels-centered-with-tick .yourir-chart-yaxis-inside .yourir-chart-yaxis-bottom-label,.yourir-chart-yaxis-labels-below-tick .yourir-chart-yaxis-inside .yourir-chart-yaxis-top-label {
+  display: none
+}
+
+.yourir-chart-volume-panel .yourir-chart-yaxis-outside .yourir-chart-yaxis-bottom-label,.yourir-chart-volume-panel .yourir-chart-yaxis-inside .yourir-chart-yaxis-bottom-label,.yourir-chart-depth-panel .yourir-chart-yaxis-outside .yourir-chart-yaxis-bottom-label,.yourir-chart-depth-panel .yourir-chart-yaxis-inside .yourir-chart-yaxis-bottom-label,.yourir-chart-relative-strength-indicator-panel .yourir-chart-yaxis-outside .yourir-chart-yaxis-bottom-label,.yourir-chart-relative-strength-indicator-panel .yourir-chart-yaxis-inside .yourir-chart-yaxis-bottom-label {
+  display: none
+}
+
+.yourir-chart-xaxis {
+  margin: 0;
+  padding: 0
+}
+
+.yourir-chart-xaxis-outside {
+  overflow: visible;
+  margin: 0;
+  padding: 0
+}
+
+.yourir-chart-xaxis-spacing {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 1px
+}
+
+.yourir-chart-xaxis-minor-spacing {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 1px
+}
+
+.yourir-chart-xaxis-stripe {
+  fill: none
+}
+
+.yourir-chart-xaxis-tick {
+  stroke: black
+}
+
+.yourir-chart-xaxis-label-container {
+  position: absolute;
+  width: 40px;
+  margin: 0;
+  padding: 0;
+  margin-left: 4px;
+  overflow: visible
+}
+
+.yourir-chart-xaxis-label {
+  white-space: nowrap;
+  margin: 0;
+  padding: 0
+}
+
+.yourir-chart-xaxis-top .yourir-chart-xaxis-outside .yourir-chart-xaxis-label-container {
+  bottom: 100%
+}
+
+.yourir-chart-xaxis-top .yourir-chart-xaxis-inside .yourir-chart-xaxis-label-container {
+  top: 0;
+  margin-top: 4px
+}
+
+.yourir-chart-xaxis-bottom .yourir-chart-xaxis-outside .yourir-chart-xaxis-label-container {
+  top: 100%
+}
+
+.yourir-chart-xaxis-bottom .yourir-chart-xaxis-inside .yourir-chart-xaxis-label-container {
+  bottom: 4px
+}
+
+.yourir-chart-extra-panel .yourir-chart-xaxis-top {
+  display: none
+}
+
+.yourir-chart-extra-panel .yourir-chart-xaxis-bottom {
+  display: none
+}
+
+.yourir-chart-xaxis-labels-left-of-tick .yourir-chart-xaxis-label-container {
+  margin-left: -44px;
+  text-align: right
+}
+
+.yourir-chart-xaxis-labels-centered-with-tick .yourir-chart-xaxis-label-container {
+  margin-left: -20px;
+  text-align: center
+}
+
+.yourir-chart-xaxis-labels-right-of-tick .yourir-chart-xaxis-label-container {
+  margin-left: 4px;
+  text-align: left
+}
+
+.yourir-chart-xaxis-labels-vertical-and-centered-with-tick .yourir-chart-xaxis-label-container {
+  transform: rotate(-90deg);
+  -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  -o-transform: rotate(-90deg);
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+  margin-left: -20px;
+  margin-top: 20px;
+  text-align: right
+}
+
+.yourir-chart-xaxis-labels-inside .yourir-chart-xaxis-outside {
+  display: none
+}
+
+.yourir-chart-xaxis-labels-inside .yourir-chart-panel {
+  margin-top: 0;
+  margin-bottom: 0
+}
+
+.yourir-chart-xaxis-labels-outside .yourir-chart-xaxis-inside {
+  display: none
+}
+
+.yourir-chart-xaxis-labels-outside .yourir-chart-xaxis-labels-top .yourir-chart-panel {
+  margin-top: 20px;
+  margin-bottom: 0
+}
+
+.yourir-chart-xaxis-labels-outside .yourir-chart-xaxis-labels-bottom .yourir-chart-panel {
+  margin-top: 0;
+  margin-bottom: 20px
+}
+
+.yourir-chart-xaxis-labels-top .yourir-chart-xaxis-bottom {
+  display: none
+}
+
+.yourir-chart-xaxis-labels-bottom .yourir-chart-xaxis-top {
+  display: none
+}
+
+.yourir-chart-xaxis-labels-none .yourir-chart-xaxis-top {
+  display: none
+}
+
+.yourir-chart-xaxis-labels-none .yourir-chart-xaxis-bottom {
+  display: none
+}
+
+.yourir-chart-xaxis-labels-hidden .yourir-chart-xaxis-top {
+  visibility: hidden
+}
+
+.yourir-chart-xaxis-labels-hidden .yourir-chart-xaxis-bottom {
+  visibility: hidden
+}
+
+.yourir-chart-zero-line {
+  stroke: black;
+  stroke-width: 0.75px;
+  stroke-dasharray: 2, 2;
+  fill: none
+}
+
+.yourir-chart-price {
+  stroke: black;
+  stroke-width: 1px;
+  fill: none
+}
+
+.yourir-chart-price-fill {
+  stroke: none;
+  fill: none;
+  fill-opacity: 0.25
+}
+
+.yourir-chart-price-bars {
+  stroke: black;
+  fill: white;
+  stroke-width: 1px
+}
+
+.yourir-chart-volume {
+  stroke: black;
+  stroke-width: 2px;
+  fill: none
+}
+
+.yourir-chart-depth {
+  stroke-width: .5px;
+  fill-opacity: 0.5
+}
+
+.yourir-chart-depth-bid {
+  stroke: #20b720;
+  fill: #20b720
+}
+
+.yourir-chart-depth-ask {
+  stroke: #e70000;
+  fill: #e70000
+}
+
+.yourir-chart-depth-auction {
+  stroke: #007bbf;
+  fill: #d5eaff;
+  fill-opacity: .85
+}
+
+.yourir-chart-candles {
+  stroke: black;
+  stroke-width: 1px;
+  fill: none
+}
+
+.yourir-chart-candles-up {
+  fill: white
+}
+
+.yourir-chart-candles-down {
+  fill: black
+}
+
+.yourir-chart-ohlc {
+  stroke: black;
+  stroke-width: 1.25px;
+  fill: none
+}
+
+.yourir-chart-ohlc-up {
+  stroke: #20b720
+}
+
+.yourir-chart-ohlc-down {
+  stroke: #e70000
+}
+
+.yourir-chart-hlc {
+  stroke: black;
+  stroke-width: 1.25px;
+  fill: none
+}
+
+.yourir-chart-hlc-up {
+  stroke: #20b720
+}
+
+.yourir-chart-hlc-down {
+  stroke: #e70000
+}
+
+.yourir-chart-prev-close {
+  stroke: black;
+  stroke-dasharray: 2, 4
+}
+
+.yourir-chart-relative-strength-indicator {
+  stroke: black;
+  stroke-width: 1px;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  fill: none
+}
+
+.yourir-chart-relative-strength-indicator-threshold-line {
+  stroke: #ff0000;
+  stroke-width: 1px;
+  stroke-dasharray: 2, 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  fill: none
+}
+
+.yourir-chart-gain {
+  stroke: black;
+  stroke-width: 1px;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  fill: none
+}
+
+.yourir-chart-holding-value {
+  stroke: black;
+  stroke-width: 1px;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  fill: none
+}
+
+.yourir-chart-performance {
+  stroke: black;
+  stroke-width: 1px;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  fill: none
+}
+
+.yourir-chart-relative-performance {
+  stroke: black;
+  stroke-width: 1px;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  fill: none
+}
+
+.yourir-chart-relative-price {
+  stroke: black;
+  stroke-width: 1px;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  fill: none
+}
+
+.yourir-chart-moving-average {
+  stroke: #ff0000;
+  stroke-width: 1.25px;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  fill: none
+}
+
+.yourir-chart-moving-average1 {
+  stroke: #ff0000
+}
+
+.yourir-chart-moving-average2 {
+  stroke: #00ff00
+}
+
+.yourir-chart-bollinger-bands {
+  stroke: #febffe;
+  stroke-width: 1.25px;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  fill: none
+}
+
+.yourir-chart-bollinger-bands-middle {
+  stroke-dasharray: 2, 2
+}
+
+.yourir-chart-bollinger-bands-fill {
+  stroke: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  fill: #febffe;
+  fill-opacity: 0.25
+}
+
+.yourir-chart-stochastic-kline {
+  stroke: #000;
+  fill: none
+}
+
+.yourir-chart-stochastic-dline {
+  stroke: #0000ff;
+  fill: none
+}
+
+.yourir-chart-stochastic-threshold-line {
+  stroke: #000;
+  stroke-width: 1px;
+  stroke-dasharray: 2, 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  fill: none
+}
+
+.yourir-chart-announcement-marker {
+  stroke: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  fill: #34495e
+}
+
+.yourir-chart-legend {
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  display: none
+}
+
+.yourir-chart-labels {
+  position: absolute;
+  top: 0;
+  left: 0
+}
+
+.yourir-chart-symbol-label-container {
+  position: absolute;
+  display: block;
+  vertical-align: middle;
+  height: 20px;
+  line-height: 20px;
+  margin: 0;
+  padding: 0;
+  margin-left: 2px;
+  margin-top: -10px
+}
+
+.yourir-chart-symbol-label {
+  white-space: nowrap;
+  margin: 0;
+  padding: 0;
+  line-height: normal
+}
+
+.yourir-chart-plot-label-container {
+  position: absolute;
+  display: block;
+  text-align: center;
+  vertical-align: middle;
+  height: 20px;
+  line-height: 20px;
+  width: 40px;
+  margin: 0;
+  padding: 0;
+  margin-top: -20px
+}
+
+.yourir-chart-plot-label {
+  white-space: nowrap;
+  margin: 0;
+  padding: 0;
+  line-height: normal
+}
+
+.yourir-chart-tooltip-container {
+  position: absolute;
+  visibility: hidden;
+  padding: 10px;
+  min-width: 150px;
+  text-align: left;
+  transition: left 0.05s ease;
+  transition: top 0.05s ease;
+  z-index: 9
+}
+
+.yourir-chart-tooltip {
+  background: rgba(255,255,255,0.75);
+  border: 1px solid #000000;
+  margin: 0;
+  padding: 0
+}
+
+table.yourir-chart-tooltip-legend {
+  width: auto;
+  table-layout: auto;
+  padding: 0;
+  margin: 0.5em 0.5em 0 0.5em
+}
+
+table.yourir-chart-tooltip-legend td {
+  padding: 0 0 0.5em 0;
+  margin: 0;
+  white-space: nowrap
+}
+
+td.yourir-chart-tooltip-date-time {
+  font-weight: bold
+}
+
+td.yourir-chart-tooltip-key {
+  font-weight: bold;
+  width: 1.5em
+}
+
+td.yourir-chart-tooltip-key:before {
+  content: "\2014"
+}
+
+td.yourir-chart-tooltip-value {
+  text-align: right;
+  padding-left: 1em !important;
+  min-width: 9em
+}
+
+.yourir-chart-tooltip-line {
+  stroke: #000000;
+  stroke-width: 1px
+}
+
+.yourir-chart-tooltip ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  white-space: normal
+}
+
+.yourir-chart-tooltip li {
+  margin: 0.5em 0.5em 0 0.5em
+}
+
+.yourir-chart-tooltip-marker {
+  stroke: #fff;
+  stroke-width: 1px;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  fill: #000
+}
+
+.yourir-chart-tooltip-marker-halo {
+  fill: #fff;
+  fill-opacity: 0.5
+}
+
+.yourir-chart-crosshairs {
+  display: none;
+  stroke: #000;
+  stroke-width: 1px;
+  stroke-opacity: 0.33
+}
+
+.yourir-sparkline .yourir-chart {
+  width: 50px;
+  margin: 0;
+  padding: 0
+}
+
+.yourir-sparkline .yourir-chart-spacing-child {
+  width: 1px;
+  height: 1px
+}
+
+.yourir-sparkline .yourir-chart-panels {
+  margin: 0;
+  padding: 0
+}
+
+.yourir-sparkline .yourir-chart-panel {
+  margin: 0;
+  padding: 0;
+  height: 25px;
+  border: none
+}
+
+.yourir-sparkline .yourir-chart-panel-plot-area {
+  margin: 0;
+  padding: 0
+}
+
+.yourir-sparkline .yourir-chart-panel-border {
+  display: none
+}
+
+.yourir-sparkline .yourir-chart-gridline {
+  stroke: none
+}
+
+.yourir-sparkline .yourir-chart-price {
+  stroke-width: 1px
+}
+
+.yourir-sparkline .yourir-chart-price-fill {
+  fill: none
+}
+
+.yourir-nav-chart .yourir-chart-panel {
+  height: 25px
+}
+
+.yourir-nav-chart-inside-range {
+  fill: none
+}
+
+.yourir-nav-chart-outside-range {
+  fill: black;
+  fill-opacity: 0.1
+}
+
+.yourir-nav-chart-gadget {
+  fill: none;
+  stroke: black
+}
+
+.yourir-chart .yourir-negative:before {
+  content: "-"
+}
+
+.yourir-chart .yourir-negative:after {
+  content: ""
+}
+
+.yourir-chart-performance-panel .yourir-positive:before {
+  content: "+"
+}
+
+.yourir-chart-ruler {
+  width: 100%;
+  height: 0px;
+  margin: 0;
+  padding: 0
+}
+
+.yourir-chart-watermark {
+  position: absolute;
+  bottom: 2px;
+  right: 2px;
+  display: none
+}
+
+.yourir-chart-empty-text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none;
+  padding: 4px
+}
+
+.yourir-empty-chart .yourir-chart-top-panel .yourir-chart-empty-text {
+  display: block
+}
+
+.yourir-chart {
+  width: 100%;
+  padding: 10px 10px 15px 50px;
+  color: #254254
+}
+
+.yourir-chart-yaxis-labels-right {
+  padding: 10px 50px 15px 10px
+}
+
+.yourir-chart-panel {
+  height: 200px
+}
+
+.yourir-chart-extra-panel {
+  height: 100px
+}
+
+.yourir-chart-panel-border {
+  stroke: none
+}
+
+.yourir-chart-panel-border-bottom {
+  stroke: black;
+  stroke-width: 2px
+}
+
+.yourir-chart-price {
+  stroke: #49c0f4;
+  stroke-width: 3px;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  filter: none
+}
+
+.yourir-chart-price-fill {
+  fill: none
+}
+
+.yourir-chart-panel-plot-area {
+  padding: 0 20px 0 20px
+}
+
+.yourir-chart-tick {
+  stroke: none
+}
+
+.yourir-chart-tick-bottom {
+  stroke: #d3cac9;
+  stroke-width: 2px
+}
+
+.yourir-chart-gridline {
+  stroke: none
+}
+
+.yourir-chart-yaxis-gridline {
+  stroke: #d3cac9;
+  stroke-dasharray: none
+}
+
+.yourir-chart-yaxis-minor-gridline {
+  stroke: none
+}
+
+.yourir-sparkline .yourir-chart-tick {
+  stroke: none
+}

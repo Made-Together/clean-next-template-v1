@@ -1,0 +1,57 @@
+{
+	"English": "English",
+	"French": "Français",
+
+	"Get Started": "Get Started",
+	"Speak to our team": "Speak to our team",
+	"Load more": "Load more",
+	"Read now": "Read now",
+	"Watch now": "Watch now",
+	"Show more videos": "Show more videos",
+	"Explore all our resources": "Explore all our resources",
+	"Explore other resources": "Explore other resources",
+	"Select a category": "Select a category",
+	"Select industry": "Select industry",
+	"Search for something": "Search for something",
+	"Loading results": "Loading results",
+	"No posts found matching": "No posts found matching",
+
+	"Explore our integrations": "Explore our integrations",
+	"All Integrations": "All Integrations",
+	"Search for an Integration": "Search for an Integration",
+
+	"Read customer story": "Read customer story",
+	"See what our customers say": "See what our customers say",
+	"See more Customer Stories": "See more Customer Stories",
+	"See our next customer story": "See our next customer story",
+
+	"Company": "Company",
+	"Location": "Location",
+	"Industry": "Industry",
+	"Bigtincan Products": "Bigtincan Products",
+
+	"Updated": "Updated",
+	"Date": "Date",
+	"Start Time": "Start Time",
+	"Share" : "Share",
+
+	"Meet the author": "Meet the author",
+	"By": "By",
+	"Follow on social": "Follow on social",
+	"Follow on socials": "Follow on socials",
+	"Brief Introduction": "Brief Introduction",
+
+	"Learning Hub": "Learning Hub",
+	"Content Hub": "Content Hub",
+	"Engagement Hub": "Engagement Hub",
+
+	"Press Release" : "Press Release",
+
+	"forms": {
+		"My work email": "My work email",
+		"errors": {
+			"Invalid email address": "Invalid email address",
+			"Please enter your email address": "Please enter your email address"
+		}
+	}
+}

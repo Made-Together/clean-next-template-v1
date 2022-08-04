@@ -1,0 +1,14 @@
+pre-commit:
+  parallel: true
+  commands:
+    linter:
+      run: yarn lint --fix
+      files: git diff --name-only @{push}
+
+    # formatting:
+    #   glob: "*.{js,jsx,ts,tsx,md,mdx,html,css,scss,json,yml}"
+    #   run: yarn prettier {staged_files} --write
+    # tests:
+    #   files: git diff --name-only @{push}
+    #   glob: "*.{js,ts, jsx, tsx}"
+    #   run: jest --findRelatedTests {files}

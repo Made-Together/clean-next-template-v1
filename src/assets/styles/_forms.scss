@@ -1,0 +1,11 @@
+input[type="checkbox"],
+input[type="radio"] {
+  border-radius: 3px;
+  vertical-align: text-top;
+}
+
+.filter-fields {
+	input,select {
+		@apply w-full flex-auto rounded border border-white border-opacity-[0.32] bg-white bg-opacity-10 font-medium focus:outline-none;
+	}
+}

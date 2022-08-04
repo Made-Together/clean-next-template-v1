@@ -1,0 +1,31 @@
+.container {
+	max-width: 1296px;
+}
+
+.section {
+	&:not(.section-top):not(.section-first) {
+		@apply pt-14 lg:pt-20;
+	}
+
+	&:not(.section-bot):not(.section-first) {
+		@apply pb-14 lg:pb-20;
+	}
+
+	&-first {
+		@apply pt-28 lg:pt-36;
+		@apply pb-20 lg:pb-28 ;
+	}
+
+	&-top {
+		@apply pt-24 lg:pt-32;
+	}
+
+	&-bot {
+		@apply pb-24 lg:pb-32;
+	}
+
+}
+
+.negative-section-margin {
+	@apply -mb-24 lg:-mb-32;
+}

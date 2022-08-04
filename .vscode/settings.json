@@ -1,0 +1,18 @@
+{
+	"editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": false,
+	"[javascript]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode",
+		"editor.formatOnSave": false
+	},
+	"[javascriptreact]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode",
+		"editor.formatOnSave": false
+	},
+	"editor.codeActionsOnSave": {
+		"source.fixAll.eslint": true
+	},
+	"[php]": {
+		"editor.defaultFormatter": "SimonSiefke.prettier-vscode"
+	}
+}
