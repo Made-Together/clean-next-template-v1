@@ -8,14 +8,7 @@ const config = {
 	poweredByHeader: false,
 	images: {
 		dangerouslyAllowSVG: true,
-		domains: [
-			"localhost",
-			"bosonprotocolcms.wpengine.com",
-			"bosonprotocoldev.wpengine.com",
-			"bosonprotocolstage.wpengine.com",
-			"cms.bosonprotocol.io",
-			"bosonprotocol.and.together.agency",
-		],
+		domains: ["localhost", "bosoncms.wpengine.com", "bosondev.wpengine.com", "bosonstage.wpengine.com", "cms.bosonprotocol.io"],
 		formats: ["image/avif", "image/webp"],
 	},
 	webpack(config) {
