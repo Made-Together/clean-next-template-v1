@@ -11,7 +11,7 @@ function Media({ type, image, collection, lottie, priority = false, ...other }) 
 				<WpImage image={image} priority={priority} {...other} />
 			</FadeInView>
 		);
-	if (type === "lottie") return <LottiePlayer lottie={lottie} />;
+	// if (type === "lottie") return <LottiePlayer lottie={lottie} />;
 	if (collection && type === "collection") return <CollectionHandler collection={collection} />;
 }
 

@@ -8,7 +8,6 @@ import Footer from "../global/Footer";
 
 export function Layout({ page = false, children }) {
 	const isIndexable = page?.seo?.indexable !== "1"; // This 1 value is yoast for "not indexable"
-
 	return (
 		<GlobalContext.Provider value={{ page }}>
 			<PasswordProtect password={page.post_password}>

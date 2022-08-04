@@ -5,7 +5,6 @@ import { getFromWordpress } from "~/utils/server";
 
 export default function Template(data) {
 	const { post_type } = data;
-
 	switch (post_type) {
 		case "post":
 			return <Post {...data} />;
