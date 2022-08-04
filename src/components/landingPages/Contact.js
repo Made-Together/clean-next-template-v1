@@ -6,9 +6,7 @@ import { TextContent } from "../flexible/TextContent";
 function Contact(props) {
 	const { content, contact_form_text, ring_cta, cta } = props;
 
-	return (
-		<></>
-	);
+	return "";
 }
 
 export default Contact;

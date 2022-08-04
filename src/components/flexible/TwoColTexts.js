@@ -61,7 +61,7 @@ function TwoColTexts(props) {
 				>
 					{heading}
 				</motion.h2>
-				<hr className="hidden h-[2px] flex-auto border-0 bg-gradient-to-r from-transparent to-mist md:block" />
+				<hr className="to-mist hidden h-[2px] flex-auto border-0 bg-gradient-to-r from-transparent md:block" />
 			</div>
 			<div className="relative">
 				<motion.div variants={plusSignContainer} viewport={{ once: true }} initial="initial" whileInView="final" className="absolute top-0 left-0">

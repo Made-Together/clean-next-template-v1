@@ -8,9 +8,7 @@ function FourOhFour(props) {
 
 	const links = ["Cookie Policy", "Privacy Policy"];
 
-	return (
-		<></>
-	);
+	return <></>;
 }
 
 export default FourOhFour;

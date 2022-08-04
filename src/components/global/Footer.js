@@ -2,13 +2,9 @@
 
 import React from "react";
 
-
 function Footer({ cta, data }) {
 	const lowerMenu = data?.lower_menu;
-	return (
-		<>
-		</>
-	);
+	return <></>;
 }
 
 export default Footer;

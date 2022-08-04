@@ -4,9 +4,7 @@ import React from "react";
 function FourOhFour(props) {
 	const { content } = props;
 
-	return (
-		<></>
-	);
+	return "";
 }
 
 export default FourOhFour;

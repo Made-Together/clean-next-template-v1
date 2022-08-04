@@ -3,13 +3,8 @@
 
 import React, { useState } from "react";
 
-
 function Resources(props) {
-
-	return (
-		<>
-			</>
-	);
+	return <></>;
 }
 
 export default Resources;

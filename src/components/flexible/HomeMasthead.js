@@ -46,43 +46,6 @@ export function LinkBlock({ link, type }) {
 				className="relative cursor-pointer rounded-lg border border-white border-opacity-10 py-6 px-5 backdrop-blur-[50px] md:p-8 lg:p-4 xl:p-8"
 			>
 				<motion.div onMouseEnter={() => setHover(true)} onMouseLeave={() => setHover(false)}>
-					<motion.div animate={{ opacity: hover ? 1 : 0 }} className="img-full-height-span pointer-events-none absolute top-0 bottom-0 right-0 rounded-lg">
-						<Image src={LinkBlockGlow} objectFit="cover" className="h-full rounded-lg" />
-					</motion.div>
-					<div className="noisey absolute inset-0 rounded-lg bg-darkNavy opacity-30" />
-
-					<div className="absolute top-[32px] right-[32px] ">
-						<svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-							<motion.path
-								initial={{ pathLength: 0, opacity: 0 }}
-								animate={{ pathLength: hover ? 1 : 0, opacity: hover ? 1 : 0 }}
-								transition={{ duration: 0.2, opacity: { duration: 0.1 } }}
-								d="M1.63477 10.0957H19.995"
-								stroke="white"
-								strokeWidth="1.5"
-								strokeLinecap="round"
-							/>
-							<motion.path
-								initial={{ pathLength: 0, opacity: 0 }}
-								animate={{ pathLength: hover ? 1 : 0, opacity: hover ? 1 : 0 }}
-								transition={{ duration: 0.2, delay: 0.2, opacity: { duration: 0.1, delay: 0.2 } }}
-								d="M11.1851 1.25919L19.9951 10.0306"
-								stroke="white"
-								strokeWidth="1.5"
-								strokeLinecap="round"
-							/>
-							<motion.path
-								initial={{ pathLength: 0, opacity: 0 }}
-								animate={{ pathLength: hover ? 1 : 0, opacity: hover ? 1 : 0 }}
-								transition={{ duration: 0.2, delay: 0.4, opacity: { duration: 0.1, delay: 0.4 } }}
-								d="M19.8904 10.2331L11.231 18.9268"
-								stroke="white"
-								strokeWidth="1.5"
-								strokeLinecap="round"
-							/>
-						</svg>
-					</div>
-
 					<div className={`${type === "grid" ? "md:flex md:space-x-8" : ""} relative`}>
 						<div className="mx-auto mb-3 w-[48px] md:mx-0">
 							<Media {...link?.icon} />

@@ -23,10 +23,7 @@ function TwoColMasthead(props) {
 					<Media {...media} priority />
 				</div>
 			</div>
-			{marquee && options.add_marquee && (
-				<div className="mt-20 ">
-				</div>
-			)}
+			{marquee && options.add_marquee && <div className="mt-20 " />}
 		</div>
 	);
 }

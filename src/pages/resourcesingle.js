@@ -20,7 +20,7 @@ export default function ResourceSingle(props) {
 						</div>
 						<h1 className="t-48 mb-5 md:mb-10">Mi gravida dui nisl a, arcu. Nec in ipsum tristique ultrices ac morbi neque.</h1>
 						<div className="flex items-center font-medium uppercase tracking-[0.15em]">
-							<span className=" t-13 mr-4 rounded-md bg-darkBlue px-3 py-2">ARTICLE</span>
+							<span className=" t-13 bg-darkBlue mr-4 rounded-md px-3 py-2">ARTICLE</span>
 							<span className="t-13 font-medium leading-6 opacity-80 ">APRIL 14, 2022</span>
 						</div>
 					</div>
@@ -39,14 +39,14 @@ export default function ResourceSingle(props) {
 							<div className="mr-1">Share</div>
 							<Link href="/" target="_blank" rel="nofollow" className="">
 								<div className="block h-8 w-8 overflow-hidden rounded-full bg-gradient-to-r from-[#EAFFFF26] via-[#EAFFFF4d] to-[#EAFFFF26] p-[1px]">
-									<div className="relative flex h-full w-full items-center justify-center overflow-hidden rounded-full bg-darkNavy">
+									<div className="bg-darkNavy relative flex h-full w-full items-center justify-center overflow-hidden rounded-full">
 										<LinkedInIcon width="14" height="14" />
 									</div>
 								</div>
 							</Link>
 							<Link href="/" target="_blank" rel="nofollow" className="">
 								<div className="block h-8 w-8 overflow-hidden rounded-full bg-gradient-to-r from-[#EAFFFF26] via-[#EAFFFF4d] to-[#EAFFFF26] p-[1px]">
-									<div className="relative flex h-full w-full items-center justify-center overflow-hidden rounded-full bg-darkNavy">
+									<div className="bg-darkNavy relative flex h-full w-full items-center justify-center overflow-hidden rounded-full">
 										<TwitterIcon width="14" height="14" />
 									</div>
 								</div>

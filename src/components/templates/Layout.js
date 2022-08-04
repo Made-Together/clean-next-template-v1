@@ -36,7 +36,6 @@ export function Layout({ page = false, children }) {
 				<Head>
 					<meta name="viewport" content="initial-scale=1.0, width=device-width" />
 				</Head>
-				{page?.page_options?.show_news_banner && <NewsBanner newsBanner={page?.global?.news_banner} />}
 				<Header data={page?.global?.header} showNewsBanner={page?.page_options?.show_news_banner} hiddenShadow={page?.post_name === "why-hubble" && true} />
 
 				<main>{children}</main>
@@ -45,7 +44,6 @@ export function Layout({ page = false, children }) {
 		</GlobalContext.Provider>
 	);
 }
-
 
 export function PasswordProtect({ password, children }) {
 	const [allowed, setAllowed] = useState(!password);

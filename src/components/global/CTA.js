@@ -3,11 +3,7 @@ import Link from "next/link";
 import React, { useState } from "react";
 
 function CTA({ cta, noring }) {
-
-	return (
-		<></>
-	);
+	return <></>;
 }
 
 export default CTA;
-

@@ -3,10 +3,7 @@ import React from "react";
 import { TextContent } from "../flexible/TextContent";
 
 function GetStarted(props) {
-
-	return (
-		<></>
-	);
+	return <></>;
 }
 
 export default GetStarted;

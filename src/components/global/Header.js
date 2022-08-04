@@ -9,9 +9,7 @@
 import React, { useEffect, useState } from "react";
 
 function Header({ data, showNewsBanner, hiddenShadow = false }) {
-	return(
-		<></>
-	);
+	return "";
 }
 
 export default Header;
