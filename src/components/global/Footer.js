@@ -24,13 +24,14 @@ export default function Footer() {
 							<div className="mt-6 md:mt-12 lg:mt-0 " key={`footer-menu-${index}`}>
 								<h6 className="text-18px mb-4 mb-8 font-medium text-dark-grey">{heading}</h6>
 								<ul className="text-16px space-y-2 md:space-y-4">
-									{links.map(({ link }, linkIndex) => (
-										<li key={`footer-menu-${index}-link-${linkIndex}`}>
-											<Link link={link} className="trans hover:text-green">
-												{link.title}
-											</Link>
-										</li>
-									))}
+									{links &&
+										links?.map(({ link }, linkIndex) => (
+											<li key={`footer-menu-${index}-link-${linkIndex}`}>
+												<Link link={link} className="trans hover:text-green">
+													{link.title}
+												</Link>
+											</li>
+										))}
 								</ul>
 							</div>
 						))}

@@ -8,18 +8,19 @@ function LinkGroup({ links, className = "" }) {
 	return (
 		<div className={`w-full md:w-auto ${className}`}>
 			<div className="-mb-4 md:flex md:space-x-5">
-				{links?.map(({ link }, i) => (
-					<div key={`linkgroupitem${i}`} className="pb-4">
-						{link.type !== "form" ? (
-							<Link {...link} className={links.length > 1 ? "w-full md:w-auto" : ""} />
-						) : (
-							<>
-								<Link {...link} type="button" className={links.length > 1 ? "w-full md:w-auto" : ""} />
-								<SingleLinkNavigation item={link} />
-							</>
-						)}
-					</div>
-				))}
+				{links &&
+					links?.map(({ link }, i) => (
+						<div key={`linkgroupitem${i}`} className="pb-4">
+							{link.type !== "form" ? (
+								<Link {...link} className={links.length > 1 ? "w-full md:w-auto" : ""} />
+							) : (
+								<>
+									<Link {...link} type="button" className={links.length > 1 ? "w-full md:w-auto" : ""} />
+									<SingleLinkNavigation item={link} />
+								</>
+							)}
+						</div>
+					))}
 			</div>
 		</div>
 	);
